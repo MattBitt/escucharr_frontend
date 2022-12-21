@@ -1,6 +1,6 @@
-
 import { useState } from 'react'
 import './App.scss'
+import TestForm from './components/TestForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,25 +14,11 @@ function App() {
       <div className="container">
         <div className="row">
             <div className="col-md-5 content">
-              main content section here
-              .left items like my profile etc.. asdfasdf
-              asdfasdfasdf
-              asdfasdf
-              qwer
-              qwerqw
-              zxcvzxcvzxcvzxvxz
-              <p>qwerqwe</p>
-              asdfasdfasdf
-              asdfqwer
-              qwer
-              qwerqwerqwer
-              qwerqwerqwer
-
-              asdfasdf
+              <TestForm />
             </div>
             <div className="col-md-2" />
             <div className="col-md-5 content">
-              second content section here
+              <TestForm />
             </div>
 
         </div>
