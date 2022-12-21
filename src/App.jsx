@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    
     <div className="App">
       <nav>
           -- Put the navbar here
@@ -17,29 +17,16 @@ function App() {
               main content section here
               .left items like my profile etc.. asdfasdf
               asdfasdfasdf
-
-
-
-
               asdfasdf
-
-
-
               qwer
               qwerqw
-
               zxcvzxcvzxcvzxvxz
-
-
               <p>qwerqwe</p>
-
               asdfasdfasdf
               asdfqwer
               qwer
               qwerqwerqwer
-
               qwerqwerqwer
-
 
               asdfasdf
             </div>
@@ -47,17 +34,15 @@ function App() {
             <div className="col-md-5 content">
               second content section here
             </div>
-            {/* <div className={["col-sm-1", "side_padding"].join(' ')}>
-              main content section here
-            </div> */}
+
         </div>
       </div>
 
       <footer>
         -- footer always stay at bottom -
       </footer>
-</div>
-</>
+    </div>
+
   )
 }
 
