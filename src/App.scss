@@ -1,61 +1,78 @@
-$primary_1: #18c9e0;
+// @import "~bootstrap/scss/bootstrap";
+
+
+$primary_1: #3d18e0;
 $primary_2: #b2ad7f;
-$primary_3: #878f99;
+$primary_3: #e41d48;
+$primary_4: #2ee41d;
+$primary_5: #e48e1d;
+
+// html,
+// body,
+// #root,
+// .container {
+//   height: 100%
+// }
+
+
+nav {
+  background-color: $primary_2;
+  height: 100px;
+  width: 100%;
+  border-width: 5px;
+  border-style: dashed;
+  color: $primary_5;
+}
 
 
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.content {
   text-align: center;
-  background-color: $primary_3;
+  color: $primary_3;
+
+
+  border-width: 1px;
+  border-style: dashed;
+  border-color: $primary_1;
+  background-color: $primary_4;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.side_padding {
+  background-color: $primary_1;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+// header,
+// .full-width {
+//   float: left;
+//   width: 100%;
+//   height: 100px;
+// }
+
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+  border: 1px solid black;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  /* Footer height */
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+// .col-sm {
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+//   background-color: $primary_2;
+//   color: $primary_1;
+//   height: 100%;
+// }
 
 
-.my-element {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box; // chrome, safari prefix
-  -moz-box-sizing: border-box; // firefox
-  -o-box-sizing: border-box; // old opera versions
-  -ms-box-sizing: border-box; // IE, Microsoft Edge
-  color: $primary_1;
+.App {
+  border-style: double;
+  border-radius: 50px;
+  color: $primary_4;
+  min-height: 100%;
+  height: 100%;
 }

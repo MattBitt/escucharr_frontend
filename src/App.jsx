@@ -1,6 +1,5 @@
 
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.scss'
 
 function App() {
@@ -8,29 +7,55 @@ function App() {
 
   return (
     <div className="App">
-      <div className="my-element"><h1>Testing</h1></div>
-      <div>
-            <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-             </div>
-              <h1>Vite + React</h1>
-              <h1> Still working!!!!!</h1>
-        <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> aasdfasdfasdfsand asdfasdf save to tesasdfasdft HMR
-        </p>
+      <nav>
+          -- Put the navbar here
+      </nav>
+      <div className="container">
+        <div className="row">
+            <div className="col-md-5 content">
+              main content section here
+              .left items like my profile etc.. asdfasdf
+              asdfasdfasdf
+
+
+
+
+              asdfasdf
+
+
+
+              qwer
+              qwerqw
+
+              zxcvzxcvzxcvzxvxz
+
+
+              qwerqwe
+
+              asdfasdfasdf
+              asdfqwer
+              qwer
+              qwerqwerqwer
+
+              qwerqwerqwer
+
+
+              asdfasdf
+            </div>
+            <div className="col-md-2" />
+            <div className="col-md-5 content">
+              second content section here
+            </div>
+            {/* <div className={["col-sm-1", "side_padding"].join(' ')}>
+              main content section here
+            </div> */}
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more.  Hope this really works.  Time to test again!!!
-      </p>asdf
-    </div>
+
+      <footer>
+        -- footer always stay at bottom -
+      </footer>
+</div>
   )
 }
 
