@@ -5,13 +5,14 @@ const options = [
   { label: "Grapes 🍇", value: "grapes" },
   { label: "Mango 🥭", value: "mango" },
   { label: "Strawberry 🍓", value: "strawberry", disabled: true },
+  { label: "orange", value: "orange"},
 ];
 
-const Example = () => {
+const MyMultiSelect = () => {
   const [selected, setSelected] = useState([]);
 
   return (
-    <div>
+    <div className="selectbox">
       <h1>Select Fruits</h1>
       <pre>{JSON.stringify(selected)}</pre>
       <MultiSelect
@@ -20,9 +21,10 @@ const Example = () => {
         onChange={setSelected}
         labelledBy="Select"
         isCreatable={true}
+
       />
     </div>
   );
 };
 
-export default Example;
+export default MyMultiSelect;

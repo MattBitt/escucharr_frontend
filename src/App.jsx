@@ -3,7 +3,7 @@ import './App.scss'
 import TestForm from './components/TestForm'
 import TestForm2 from './components/TestForm2'
 import NavigationBar from './components/NavigationBar'
-import Example from './components/Example'
+import MyMultiSelect from './components/MyMultiSelect'
 
 
 function App() {
@@ -15,7 +15,11 @@ function App() {
       {/* <nav>
         <NavigationBar />
       </nav> */}
-      <Example />
+      <p><TestForm /></p>
+      <p><TestForm2 /></p>
+
+      <p><MyMultiSelect /></p>
+      <p><MyMultiSelect /></p>
       {/* <div className="container">
         <div className="row">
             <div className="col-md-5 content">

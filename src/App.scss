@@ -4,7 +4,7 @@
 $primary_1: #3d18e0;
 $primary_2: #b2ad7f;
 $primary_3: #e41d48;
-$primary_4: #2ee41d;
+$primary_4: #311de4;
 $primary_5: #e48e1d;
 
 // html,
@@ -67,7 +67,10 @@ footer {
 //   color: $primary_1;
 //   height: 100%;
 // }
-
+.selectbox {
+  background-color: pink;
+  padding: 20px 20px;
+}
 
 .App {
   border: 1px solid lime;
