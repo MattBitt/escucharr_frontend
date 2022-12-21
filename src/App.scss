@@ -15,14 +15,14 @@ $primary_5: #e48e1d;
 // }
 
 
-nav {
-  background-color: $primary_2;
-  height: 100px;
-  width: 100%;
-  border-width: 5px;
-  border-style: dashed;
-  color: $primary_5;
-}
+// nav {
+//   background-color: $primary_2;
+//   height: 100px;
+//   width: 100%;
+//   border-width: 5px;
+//   border-style: dashed;
+//   color: $primary_5;
+// }
 
 
 
@@ -31,7 +31,7 @@ nav {
   color: $primary_3;
 
 
-  border-width: 1px;
+  border-width: 10px;
   border-style: dashed;
   border-color: $primary_1;
   background-color: $primary_4;
@@ -70,9 +70,9 @@ footer {
 
 
 .App {
-  border-style: double;
-  border-radius: 50px;
+  border: 1px solid lime;
   color: $primary_4;
   min-height: 100%;
   height: 100%;
+  margin: 50px 50px;
 }

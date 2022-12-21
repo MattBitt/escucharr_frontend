@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import './App.scss'
 import TestForm from './components/TestForm'
+import TestForm2 from './components/TestForm2'
+import NavigationBar from './components/NavigationBar'
+import Example from './components/Example'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,26 +12,27 @@ function App() {
   return (
     
     <div className="App">
-      <nav>
-          -- Put the navbar here
-      </nav>
-      <div className="container">
+      {/* <nav>
+        <NavigationBar />
+      </nav> */}
+      <Example />
+      {/* <div className="container">
         <div className="row">
             <div className="col-md-5 content">
               <TestForm />
             </div>
             <div className="col-md-2" />
             <div className="col-md-5 content">
-              <TestForm />
+              asdaasdferw
+              ASDFasdf
+
             </div>
 
-        </div>
+        </div> */}
       </div>
 
-      <footer>
-        -- footer always stay at bottom -
-      </footer>
-    </div>
+
+
 
   )
 }
