@@ -1,6 +1,7 @@
 FROM node
-WORKDIR /app
 COPY package.json /app/package.json
+WORKDIR /app
+
 RUN npm i
 COPY . /app
 ## EXPOSE [Port you mentioned in the vite.config file]

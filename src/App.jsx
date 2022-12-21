@@ -6,6 +6,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
+    <>
     <div className="App">
       <nav>
           -- Put the navbar here
@@ -30,7 +31,7 @@ function App() {
               zxcvzxcvzxcvzxvxz
 
 
-              qwerqwe
+              <p>qwerqwe</p>
 
               asdfasdfasdf
               asdfqwer
@@ -56,6 +57,7 @@ function App() {
         -- footer always stay at bottom -
       </footer>
 </div>
+</>
   )
 }
 
