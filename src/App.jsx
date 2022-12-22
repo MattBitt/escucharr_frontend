@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import './App.scss'
-import TestForm from './components/TestForm'
-import TestForm2 from './components/TestForm2'
+import SourceForm from './components/SourceForm'
+import TrackForm from './components/TrackForm'
 import NavigationBar from './components/NavigationBar'
-import MyMultiSelect from './components/MyMultiSelect'
 
 
 function App() {
@@ -12,28 +11,18 @@ function App() {
   return (
     
     <div className="App">
-      {/* <nav>
+      <nav>
         <NavigationBar />
-      </nav> */}
-      <p><TestForm /></p>
-      <p><TestForm2 /></p>
-
-      <p><MyMultiSelect /></p>
-      <p><MyMultiSelect /></p>
-      {/* <div className="container">
+      </nav>
+      <div className="container">
         <div className="row">
-            <div className="col-md-5 content">
-              <TestForm />
-            </div>
-            <div className="col-md-2" />
-            <div className="col-md-5 content">
-              asdaasdferw
-              ASDFasdf
-
-            </div>
-
-        </div> */}
+          <div className="left-pane col"><SourceForm /></div>
+          <div className="right-pane col"><TrackForm /></div>
+        </div>
       </div>
+    </div>
+
+
 
 
 
