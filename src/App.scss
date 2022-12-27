@@ -1,72 +1,30 @@
 // @import "~bootstrap/scss/bootstrap";
 
 
-$primary_1: #3d18e0;
+$primary_1: #e01818;
 $primary_2: #b2ad7f;
-$primary_3: #e41d48;
-$primary_4: #311de4;
+$primary_3: #e4d71d;
+$primary_4: #ffffff;
 $primary_5: #e48e1d;
+$primary_6: blue;
 
-// html,
-// body,
-// #root,
-// .container {
-//   height: 100%
-// }
-
-
-// nav {
-//   background-color: $primary_2;
-//   height: 100px;
-//   width: 100%;
-//   border-width: 5px;
-//   border-style: dashed;
-//   color: $primary_5;
-// }
-
-
+#root {
+  background-color: $primary_1;
+  color: white;
+}
 
 .content {
   text-align: center;
   color: $primary_3;
   border-width: 100px;
   border-style: dashed;
-  border-color: $primary_1;
+  border-color: $primary_2;
   background-color: $primary_4;
 }
 
-.side_padding {
-  background-color: $primary_1;
-}
 
-// header,
-// .full-width {
-//   float: left;
-//   width: 100%;
-//   height: 100px;
-// }
-
-footer {
-  background-color: #555;
-  color: white;
-  padding: 15px;
-  border: 1px solid black;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  /* Footer height */
-}
-
-// .col-sm {
-
-//   background-color: $primary_2;
-//   color: $primary_1;
-//   height: 100%;
-// }
 .selectbox {
-  background-color: $primary_1;
+  background-color: $primary_4;
   color: $primary_2;
   margin: 30px 0px;
   padding: 20px 20px;
@@ -78,4 +36,16 @@ footer {
   min-height: 100%;
   height: 100%;
   margin: 50px 50px;
+}
+
+.left-pane {
+  background-color: $primary_3;
+}
+
+.right-pane {
+  background-color: $primary_6;
+}
+
+a {
+  color: white;
 }

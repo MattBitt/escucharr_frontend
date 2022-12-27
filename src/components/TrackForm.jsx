@@ -1,20 +1,26 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import MyTextInputBox from './MyTextInputBox';
 import MyMultiSelect from './MyMultiSelect';
-import axios from 'axios';
+import axios from "axios"
 
-const baseURL = "http://127.0.0.1:5000/api/v1/track/258";
 
-function TrackForm() {
-  const [track, setTrack] = React.useState(null)
+
+
+
+function TrackForm({trackId}) {
+  const [track, setTrack] = useState(null);
   
-  React.useEffect(() => {
+
+  const trackIdUrl=parseInt(trackId)
+  const baseURL = "http://127.0.0.1:5000/api/v1/track/" + trackIdUrl;
+
+  useEffect(() => {
     axios.get(baseURL).then((response) => {
       setTrack(response.data)
     })
   }, [] );
   
-  if (!track) return null;
+  if (!track) return "No Track!";
 
 
   return (

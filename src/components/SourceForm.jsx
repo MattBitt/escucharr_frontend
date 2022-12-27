@@ -3,18 +3,20 @@ import Form from 'react-bootstrap/Form';
 import MyTextInputBox from './MyTextInputBox';
 import axios from "axios"
 
-const baseURL = "http://127.0.0.1:5000/api/v1/source/870";
 
-export default function TestForm() {
+export default function SourceForm( {sourceId}) {
   const [source, setSource] = React.useState(null)
   
+
+  const sourceIdUrl=parseInt(sourceId)
+  const baseURL = "http://127.0.0.1:5000/api/v1/source/" + sourceIdUrl;
   React.useEffect(() => {
     axios.get(baseURL).then((response) => {
       setSource(response.data)
     })
   }, [] );
   
-  if (!source) return null;
+  if (!source) return "No Sources!";
   
   
   return (
