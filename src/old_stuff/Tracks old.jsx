@@ -1,7 +1,6 @@
 import{ useMemo, useState, useEffect } from "react";
 import axios from "axios"
 import { Link } from 'react-router-dom';
-import DataTable from "../components/DataTable";
 
 
 const baseURL = "http://127.0.0.1:5000/api/v1/tracks"
@@ -69,7 +68,8 @@ export const COLUMNS = [
   
   return ( 
       <>
-            <DataTable columns={columns} data={data} />
+            <h1>This is where the data table belongs</h1>
+            {/* <DataTable columns={columns} data={data} /> */}
       </>
     
     )

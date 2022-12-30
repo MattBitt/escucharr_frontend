@@ -1,19 +1,18 @@
-import { useState } from "react";
-import { MultiSelect } from "react-multi-select-component";
+import { useState } from 'react'
+import { MultiSelect } from 'react-multi-select-component'
 
 const options = [
-  { label: "Grapes", value: "grapes" },
-  { label: "Mango", value: "mango" },
-  { label: "Strawberry", value: "strawberry", disabled: true },
-  { label: "florescent", value: "florescent"},
-  { label: "orange", value: "orange"},
-  { label: "wall", value: "wall"},
-  { label: "hat", value: "hat"},
-
-];
+  { label: 'Grapes', value: 'grapes' },
+  { label: 'Mango', value: 'mango' },
+  { label: 'Strawberry', value: 'strawberry', disabled: true },
+  { label: 'florescent', value: 'florescent' },
+  { label: 'orange', value: 'orange' },
+  { label: 'wall', value: 'wall' },
+  { label: 'hat', value: 'hat' },
+]
 
 const MyMultiSelect = (props) => {
-  const [selected, setSelected] = useState([]);
+  const [selected, setSelected] = useState([])
 
   return (
     <div className="selectbox">
@@ -25,10 +24,9 @@ const MyMultiSelect = (props) => {
         onChange={setSelected}
         labelledBy="{props.label}"
         isCreatable={true}
-
       />
     </div>
-  );
-};
+  )
+}
 
-export default MyMultiSelect;
+export default MyMultiSelect

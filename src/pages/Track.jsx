@@ -1,18 +1,12 @@
-import { Link, useParams } from 'react-router-dom';
-import TrackForm from '../components/TrackForm'
-
+// import TrackForm from '../components/TrackForm'
+import { Link } from 'react-router-dom'
 
 export default function Track() {
-  const { trackId } = useParams();
-  
   return (
     <>
-      <h2><Link to="/tracks">Close Editor</Link></h2>
-      <TrackForm trackId={trackId} />
-
+      <h2>
+        <Link to="/tracks">Close Editor</Link>
+      </h2>
     </>
-  );
-};
-    
-
-
+  )
+}
