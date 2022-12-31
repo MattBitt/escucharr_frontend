@@ -3,7 +3,8 @@ import axios from 'axios'
 import DataTable from '../components/DataTable'
 import { createColumnHelper } from '@tanstack/react-table'
 import { Link } from 'react-router-dom'
-
+import EditButton from '../components/EditButton'
+import DeleteButton from '../components/DeleteButton'
 const TracksPage = () => {
   const apiUrl = import.meta.env.VITE_SERVER_URL
   const apiPath = import.meta.env.VITE_API_PATH
@@ -41,23 +42,22 @@ const TracksPage = () => {
       footer: (info) => info.column.id,
     }),
     columnHelper.display({
-      id: 'track_actions',
+      id: 'track_action_edit',
       cell: (props) => (
         <>
-          {/* <p>{JSON.stringify(row)}</p> */}
-          <span>
-            <Link to={props.row.original.id}>{'Edit'}</Link>
-          </span>
+          <Link to={props.row.original.id}>
+            <EditButton />
+          </Link>
         </>
       ),
     }),
     columnHelper.display({
-      id: 'actions',
+      id: 'track_action_delete',
       cell: (props) => (
         <>
-          <span>
-            <Link to={props.row.original.id + '/delete'}>{'Delete'}</Link>
-          </span>
+          <Link to={props.row.original.id + '/delete'}>
+            <DeleteButton />
+          </Link>
         </>
       ),
     }),

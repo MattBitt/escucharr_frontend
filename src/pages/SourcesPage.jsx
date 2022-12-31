@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 // import TracksTable from '../components/TracksTable'
 // import * as React from 'react'
+import EditButton from '../components/EditButton'
+import DeleteButton from '../components/DeleteButton'
 
 import DataTable from '../components/DataTable'
 import { createColumnHelper } from '@tanstack/react-table'
@@ -43,23 +45,22 @@ const SourcesPage = () => {
       footer: (info) => info.column.id,
     }),
     columnHelper.display({
-      id: 'source_actions',
+      id: 'source_action_edit',
       cell: (props) => (
         <>
-          {/* <p>{JSON.stringify(row)}</p> */}
-          <span>
-            <Link to={props.row.original.id}>{'Edit'}</Link>
-          </span>
+          <Link to={props.row.original.id}>
+            <EditButton />
+          </Link>
         </>
       ),
     }),
     columnHelper.display({
-      id: 'actions',
+      id: 'source_action_delete',
       cell: (props) => (
         <>
-          <span>
-            <Link to={props.row.original.id + '/delete'}>{'Delete'}</Link>
-          </span>
+          <Link to={props.row.original.id + '/delete'}>
+            <DeleteButton />
+          </Link>
         </>
       ),
     }),

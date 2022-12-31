@@ -1,4 +1,3 @@
-import './App.scss'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import NoPage from './pages/NoPage'
@@ -14,7 +13,7 @@ function App() {
 
   return (
     <>
-      <div className="App ">
+      <div className="App bg-light">
         <div>
           <nav>
             <NavigationBar />
@@ -32,7 +31,7 @@ function App() {
             <Route path="tracks" element={<TracksPage />} />
             <Route path="tracks/:trackId" element={<TrackLoadFromUrl />} />
 
-            <Route path="whats-playing" element={<WhatsPlaying />} />
+            <Route path="whatsplaying" element={<WhatsPlaying />} />
             <Route path="*" element={<NoPage />} />
           </Routes>
         </div>
