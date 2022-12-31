@@ -8,11 +8,13 @@ import { createColumnHelper } from '@tanstack/react-table'
 import { Link } from 'react-router-dom'
 
 const SourcesPage = () => {
+  const apiUrl = import.meta.env.VITE_SERVER_URL
+  const apiPath = import.meta.env.VITE_API_PATH
   const [sources, setSources] = useState([])
   // const [loading, setLoading] = useState(false);
   const getSourceData = async () => {
     try {
-      const data = await axios.get('http://127.0.0.1:5000/api/v1/sources')
+      const data = await axios.get(apiUrl + apiPath + '/sources')
       setSources(data.data)
     } catch (e) {
       // console.error(e)

@@ -5,11 +5,13 @@ import { createColumnHelper } from '@tanstack/react-table'
 import { Link } from 'react-router-dom'
 
 const TracksPage = () => {
+  const apiUrl = import.meta.env.VITE_SERVER_URL
+  const apiPath = import.meta.env.VITE_API_PATH
   const [tracks, setTracks] = useState([])
   // const [loading, setLoading] = useState(false);
   const getTrackData = async () => {
     try {
-      const data = await axios.get('http://127.0.0.1:5000/api/v1/tracks')
+      const data = await axios.get(apiUrl + apiPath + '/tracks')
       setTracks(data.data)
     } catch (e) {
       // console.error(e)
