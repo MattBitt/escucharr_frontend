@@ -4,14 +4,16 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 function SourceFormLoadFromUrl() {
+  const apiUrl = import.meta.env.VITE_SERVER_URL
+  const apiPath = import.meta.env.VITE_API_PATH
+  console.log(import.meta.env.VITE_SERVER_URL)
+  console.log(import.meta.env.VITE_API_PATH)
   const { sourceId } = useParams()
   const [source, setSource] = useState([])
   // const [loading, setLoading] = useState(false);
   const getSourceData = async () => {
     try {
-      const data = await axios.get(
-        'http://127.0.0.1:5000/api/v1/sources/' + sourceId
-      )
+      const data = await axios.get(apiUrl + apiPath + '/sources/' + sourceId)
       setSource(data.data)
     } catch (e) {
       // console.error(e)
