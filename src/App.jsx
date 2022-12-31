@@ -8,28 +8,34 @@ import NavigationBar from './components/NavigationBar'
 import WhatsPlaying from './pages/WhatsPlaying'
 import TrackLoadFromUrl from './components/TrackLoadFromUrl'
 import SourceFormLoadFromUrl from './components/SourceFormLoadFromUrl'
-
+import BlankSourceForm from './components/BlankSourceForm.jsx'
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className="App">
-        <nav>
-          <NavigationBar />
-        </nav>
+      <div className="App ">
+        <div>
+          <nav>
+            <NavigationBar />
+          </nav>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="sources" element={<SourcesPage />} />
-          <Route path="sources/:sourceId" element={<SourceFormLoadFromUrl />} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="sources/blank" element={<BlankSourceForm />} />
+            <Route path="sources" element={<SourcesPage />} />
+            <Route
+              path="sources/:sourceId"
+              element={<SourceFormLoadFromUrl />}
+            />
 
-          <Route path="tracks" element={<TracksPage />} />
-          <Route path="tracks/:trackId" element={<TrackLoadFromUrl />} />
+            <Route path="tracks" element={<TracksPage />} />
+            <Route path="tracks/:trackId" element={<TrackLoadFromUrl />} />
 
-          <Route path="whats-playing" element={<WhatsPlaying />} />
-          <Route path="*" element={<NoPage />} />
-        </Routes>
+            <Route path="whats-playing" element={<WhatsPlaying />} />
+            <Route path="*" element={<NoPage />} />
+          </Routes>
+        </div>
       </div>
     </>
   )

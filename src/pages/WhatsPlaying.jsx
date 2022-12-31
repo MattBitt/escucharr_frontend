@@ -3,13 +3,13 @@ import { useState, useEffect } from 'react'
 import TrackLoadFromUrl from '../components/TrackLoadFromUrl'
 import SourceFrom from '../components/SourceForm'
 
-const baseURL = 'http://127.0.0.1:5000/api/v1/whatsplaying'
-
 const WhatsPlaying = () => {
+  const apiUrl = import.meta.env.VITE_SERVER_URL
+  const apiPath = import.meta.env.VITE_API_PATH
   const [data, setData] = useState([])
 
   useEffect(() => {
-    axios.get(baseURL).then((response) => {
+    axios.get(apiUrl + apiPath + '/whatsplaying').then((response) => {
       setData(response.data)
     })
   }, [])
