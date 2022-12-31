@@ -68,7 +68,7 @@ const SourcesPage = () => {
 
   return (
     <div>
-      <h1>This is where the data table belongs</h1>
+      <h1>Sources</h1>
       <DataTable data={sources} columns={columns} />
     </div>
   )

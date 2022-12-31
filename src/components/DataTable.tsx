@@ -42,7 +42,7 @@ function DataTable(props) {
   return (
     <div className="p-2">
       <div className="h-2" />
-      <table className="table table-primary">
+      <table className="table table-primary styled-table">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>

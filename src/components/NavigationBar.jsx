@@ -9,15 +9,12 @@ function NavigationBar() {
   return (
     <Navbar className="bg-dark" expand="lg">
       <Container>
-        <Navbar.Brand href="/" className="text-primary fw-bolder">
-          escucharr
+        <Navbar.Brand className="text-primary fw-bolder">
+          <Link to="/">escucharr</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link className="nav-link text-light fw-bold" to="/">
-              Home
-            </Link>
             <Link className="nav-link text-light fw-bold" to="/sources">
               View Sources
             </Link>

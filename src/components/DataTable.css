@@ -22,9 +22,9 @@
   border-bottom: 1px solid #dddddd;
 }
 
-.styled-table tbody {
+.styled-table tbody { */
 
-  /* background-color: #f3f3f3;
+/* background-color: #f3f3f3;
   color: #000000;
 }
 
@@ -35,7 +35,24 @@
 .styled-table tbody tr.active-row {
   font-weight: bold;
   color: #000000;
-} */
-.delete-button {
-  color: red;
+}
+*/
+
+.styled-table {
+  background-color: #1e1f25;
+  border-radius: 20px;
+  maxheight: 24px;
+  padding: 0 10px 10px 10px;
+  overflow: auto;
+}
+
+Table thead {
+  position: sticky;
+  top: 0px;
+  margin: 0 0 0 0;
+  white-space: nowrap;
+}
+
+.styled-table td {
+  white-space: nowrap;
 }

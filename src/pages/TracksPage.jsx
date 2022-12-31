@@ -30,16 +30,48 @@ const TracksPage = () => {
       // cell: (info) => <Link to={info.row.id}>{info.getValue()}</Link>,
       cell: (info) => info.getValue(),
       footer: (info) => info.column.id,
+      width: 1000,
     }),
-    columnHelper.accessor('track_number', {
-      header: () => 'Track Number',
+    columnHelper.accessor('track_title', {
+      id: 'track_title2',
+      header: () => 'Track Title #2',
+      // cell: (info) => <Link to={info.row.id}>{info.getValue()}</Link>,
       cell: (info) => info.getValue(),
       footer: (info) => info.column.id,
+      width: 1000,
     }),
     columnHelper.accessor('album_name', {
-      header: () => 'Album Name',
+      header: () => 'album_name',
+      // cell: (info) => <Link to={info.row.id}>{info.getValue()}</Link>,
       cell: (info) => info.getValue(),
       footer: (info) => info.column.id,
+      width: 10,
+    }),
+    columnHelper.accessor('artist_name', {
+      header: () => 'artist_name',
+      // cell: (info) => <Link to={info.row.id}>{info.getValue()}</Link>,
+      cell: (info) => info.getValue(),
+      footer: (info) => info.column.id,
+      width: 10,
+    }),
+    columnHelper.accessor('created_date', {
+      header: () => 'created_date',
+      // cell: (info) => <Link to={info.row.id}>{info.getValue()}</Link>,
+      cell: (info) => info.getValue(),
+      footer: (info) => info.column.id,
+      width: 10,
+    }),
+    columnHelper.accessor('end_time', {
+      header: () => 'end_time',
+      cell: (info) => info.getValue(),
+      footer: (info) => info.column.id,
+      width: 500,
+    }),
+    columnHelper.accessor('start_time', {
+      header: () => 'start_time',
+      cell: (info) => info.getValue(),
+      footer: (info) => info.column.id,
+      width: 500,
     }),
     columnHelper.display({
       id: 'track_action_edit',
@@ -65,7 +97,7 @@ const TracksPage = () => {
 
   return (
     <div>
-      <h1>This is where the data table belongs</h1>
+      <h1>Tracks</h1>
       <DataTable data={tracks} columns={columns} />
     </div>
   )

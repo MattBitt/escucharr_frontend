@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import TrackLoadFromUrl from '../components/TrackLoadFromUrl'
-import SourceFrom from '../components/SourceForm'
+import TrackForm from '../components/TrackForm'
+import SourceForm from '../components/SourceForm'
 
 const WhatsPlaying = () => {
   const apiUrl = import.meta.env.VITE_SERVER_URL
@@ -21,7 +21,7 @@ const WhatsPlaying = () => {
         <h1>Source Playing</h1>
         <h2>Video Title: {data[0].video_title}</h2>
         <h2>Current Title: {data[0].current_time}</h2>
-        <SourceFrom source={data[0]} />;
+        <SourceForm source={data[0]} />;
       </>
     )
   }
@@ -31,7 +31,7 @@ const WhatsPlaying = () => {
         <h1>Track Playing</h1>
         <h2>Track Title: {data[0].track_title}</h2>
         <h2>Current Time: {data[0].current_time}</h2>
-        <TrackLoadFromUrl track={data[0]} />;
+        <TrackForm track={data[0]} />;
       </>
     )
 }
